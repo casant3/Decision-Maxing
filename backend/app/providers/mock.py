@@ -70,8 +70,14 @@ def _instance_from_schema(schema: dict[str, Any], defs: dict[str, Any] | None = 
 
 
 def _detect_role(prompt: str) -> str:
+    lowered = prompt.lower()
+    # The advisor prompt ends with "as the <role> advisor"; the appended JSON
+    # schema mentions every role name, so a bare substring scan is ambiguous.
     for role in ADVISOR_ROLES:
-        if role in prompt.lower():
+        if f"as the {role} advisor" in lowered:
+            return role
+    for role in ADVISOR_ROLES:
+        if role in lowered:
             return role
     return "contrarian"
 
