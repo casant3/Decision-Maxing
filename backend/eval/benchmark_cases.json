@@ -1,0 +1,74 @@
+{
+  "cases": [
+    {
+      "id": "bench_business_validation",
+      "category": "business idea validation",
+      "initial_message": "I want to start a subscription box for houseplant lovers. Boxes would include a plant, care accessories and a printed care guide. Should I go ahead?",
+      "followups": [
+        "I have $8,000 saved for this and about 12 hours per week. I'd keep my day job. I have no e-commerce experience but I run a plant Instagram with 9k followers."
+      ],
+      "expected_route": "lightweight_council",
+      "notes": "Moderate stakes, reversible, demand uncertainty dominates."
+    },
+    {
+      "id": "bench_career_decision",
+      "category": "career decision",
+      "initial_message": "I've been offered a senior engineering role at a well-funded startup (20% pay rise, more scope) but my current big-company job is stable and I'm up for promotion in ~9 months. Which should I take?",
+      "followups": [
+        "I have 8 years experience, a mortgage, and my partner works part-time. Risk tolerance is moderate. The startup offer expires in two weeks."
+      ],
+      "expected_route": "full_council",
+      "notes": "High personal impact, hard to reverse, time pressure."
+    },
+    {
+      "id": "bench_product_strategy",
+      "category": "product strategy",
+      "initial_message": "Our B2B SaaS (invoice automation, $40k MRR, 95% SMB customers) keeps getting enterprise feature requests. Should we build enterprise features or double down on SMB?",
+      "followups": [
+        "Team of 6 engineers. 18 months runway. Two enterprise prospects worth ~$5k MRR each are asking for SSO and audit logs. SMB churn is 3%/month."
+      ],
+      "expected_route": "full_council",
+      "notes": "Strategic fork with multi-dimensional trade-offs."
+    },
+    {
+      "id": "bench_purchase_decision",
+      "category": "purchase decision",
+      "initial_message": "Should I buy a 3-year-old electric car (about $24k) or a new hybrid (about $31k) as my daily commuter? I drive about 60 miles a day.",
+      "followups": [
+        "I can charge at home. Budget cap is $32k. I keep cars around 8 years."
+      ],
+      "expected_route": "research_assisted",
+      "notes": "Mostly factual: depreciation, battery longevity, running costs."
+    },
+    {
+      "id": "bench_project_prioritisation",
+      "category": "project prioritisation",
+      "initial_message": "I have three side projects: a half-finished budgeting app, a newsletter with 800 subscribers, and a paid workshop idea. I can only pursue one seriously this year. Which one?",
+      "followups": [
+        "Goal is $2k/month extra income within 12 months. About 10 hours a week available. The newsletter grows ~5% monthly, the app has no users yet."
+      ],
+      "expected_route": "lightweight_council",
+      "notes": "Opportunity-cost comparison under one clear goal."
+    },
+    {
+      "id": "bench_marketing_strategy",
+      "category": "marketing strategy",
+      "initial_message": "Our DTC coffee brand ($15k/month revenue) relies 90% on Instagram ads whose costs keep rising. Should we shift budget to influencer partnerships, SEO/content, or retail wholesale?",
+      "followups": [
+        "Ad spend is $4k/month at 2.1 ROAS, down from 3.5 a year ago. One founder full-time, margin 55%. We want to be at $30k/month within a year."
+      ],
+      "expected_route": "lightweight_council",
+      "notes": "Channel-mix decision, moderate stakes, current market data helps."
+    },
+    {
+      "id": "bench_operational_problem",
+      "category": "operational problem",
+      "initial_message": "Our 12-person support team's first-response time has slipped from 2h to 9h after a product launch doubled ticket volume. Hiring is frozen for a quarter. How do we fix response times?",
+      "followups": [
+        "Ticket mix: 60% how-to questions, 25% bugs, 15% billing. We have no self-serve help centre. Budget for tools up to $500/month."
+      ],
+      "expected_route": "lightweight_council",
+      "notes": "Constrained operational fix; reversible interventions available."
+    }
+  ]
+}

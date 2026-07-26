@@ -1,0 +1,90 @@
+[
+ {
+  "benchmark_id": "bench_purchase_decision",
+  "category": "purchase decision",
+  "mode": "direct",
+  "status": "complete",
+  "cost_usd": 0.016808,
+  "model_calls": 5,
+  "latency_s": 0.06,
+  "degradations": [],
+  "recommendation": "Proceed with the simplest option that meets your stated goal.",
+  "scores": {
+   "constraint_adherence": 3,
+   "factual_grounding": 3,
+   "actionability": 3,
+   "decision_clarity": 3,
+   "risk_awareness": 3,
+   "rationale": ""
+  }
+ },
+ {
+  "benchmark_id": "bench_purchase_decision",
+  "category": "purchase decision",
+  "mode": "research_assisted",
+  "status": "complete",
+  "cost_usd": 0.022643,
+  "model_calls": 7,
+  "latency_s": 0.06,
+  "degradations": [],
+  "recommendation": "Proceed with the simplest option that meets your stated goal.",
+  "scores": {
+   "constraint_adherence": 3,
+   "factual_grounding": 3,
+   "actionability": 3,
+   "decision_clarity": 3,
+   "risk_awareness": 3,
+   "rationale": ""
+  }
+ },
+ {
+  "benchmark_id": "bench_purchase_decision",
+  "category": "purchase decision",
+  "mode": "lightweight",
+  "status": "complete",
+  "cost_usd": 0.136844,
+  "model_calls": 12,
+  "latency_s": 0.1,
+  "degradations": [
+   "audit skipped (low stakes)"
+  ],
+  "recommendation": "Run a two-week demand validation experiment before committing.",
+  "scores": {
+   "constraint_adherence": 3,
+   "factual_grounding": 3,
+   "actionability": 3,
+   "decision_clarity": 3,
+   "risk_awareness": 3,
+   "rationale": ""
+  },
+  "adopted_components": [
+   "Demand smoke test",
+   "Customer interviews",
+   "Pre-defined go/no-go signals"
+  ]
+ },
+ {
+  "benchmark_id": "bench_purchase_decision",
+  "category": "purchase decision",
+  "mode": "full",
+  "status": "complete",
+  "cost_usd": 0.268675,
+  "model_calls": 16,
+  "latency_s": 0.11,
+  "degradations": [],
+  "recommendation": "Run a two-week demand validation experiment before committing.",
+  "scores": {
+   "constraint_adherence": 3,
+   "factual_grounding": 3,
+   "actionability": 3,
+   "decision_clarity": 3,
+   "risk_awareness": 3,
+   "rationale": ""
+  },
+  "adopted_components": [
+   "Demand smoke test",
+   "Customer interviews",
+   "Pre-defined go/no-go signals"
+  ]
+ }
+]
