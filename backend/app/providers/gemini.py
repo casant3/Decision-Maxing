@@ -4,7 +4,13 @@ from __future__ import annotations
 
 import httpx
 
-from app.providers.base import ProviderAdapter, ProviderError, ProviderRequest, ProviderResult, Usage
+from app.providers.base import (
+    ProviderAdapter,
+    ProviderError,
+    ProviderRequest,
+    ProviderResult,
+    Usage,
+)
 
 BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
 

@@ -126,7 +126,7 @@ class ProviderAdapter(ABC):
                     )
                 self.breaker.record_success()
                 return result
-            except TimeoutError as e:
+            except TimeoutError:
                 last_err = ProviderError(f"{self.name} timed out after {req.timeout_s}s")
                 self.breaker.record_failure()
             except ProviderError as e:

@@ -4,7 +4,13 @@ from __future__ import annotations
 
 import httpx
 
-from app.providers.base import ProviderAdapter, ProviderError, ProviderRequest, ProviderResult, Usage
+from app.providers.base import (
+    ProviderAdapter,
+    ProviderError,
+    ProviderRequest,
+    ProviderResult,
+    Usage,
+)
 
 API_URL = "https://api.anthropic.com/v1/messages"
 API_VERSION = "2023-06-01"

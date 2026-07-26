@@ -26,6 +26,7 @@ class Stage(str, Enum):
     EXECUTOR = "executor"
     VALIDATE = "validate"
     PRESENT = "present"
+    DIRECT = "direct_answer"  # single-answer stage for direct / research-assisted routes
 
 
 # Pipeline order per route. Direct/research-assisted routes use a single
