@@ -42,11 +42,21 @@ STAGE_LABELS: dict[str, str] = {
 }
 
 _background_tasks: set[asyncio.Task] = set()
+_registry: ProviderRegistry | None = None
+
+
+def get_registry() -> ProviderRegistry:
+    """Process-level singleton: adapters keep circuit-breaker state (and the
+    mock keeps its scripted state) across requests."""
+    global _registry
+    if _registry is None:
+        _registry = ProviderRegistry(get_settings())
+    return _registry
 
 
 def _engine(session: AsyncSession) -> WorkflowEngine:
     settings = get_settings()
-    return WorkflowEngine(CaseRepository(session), ProviderRegistry(settings), settings)
+    return WorkflowEngine(CaseRepository(session), get_registry(), settings)
 
 
 async def _load_case(session: AsyncSession, case_id: str) -> CaseFile:
@@ -222,6 +232,5 @@ async def record_outcome(case_id: str, review: OutcomeReview,
 @router.get("/health")
 async def health():
     settings = get_settings()
-    registry = ProviderRegistry(settings)
     return {"status": "ok", "mock_mode": settings.use_mock_providers,
-            "providers": await registry.health()}
+            "providers": await get_registry().health()}
